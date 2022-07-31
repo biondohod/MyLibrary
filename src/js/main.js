@@ -25,3 +25,14 @@ $('.active').click(click);
 $('button').click(function () {
   $(this).toggleClass('btn--active', 'testClass');
 });
+
+console.log($('div').eq(2).html());
+$('button').html('Click the button');
+
+$('div').click((evt) => {
+  console.log($(evt.target).index());
+});
+console.log($('div').eq(2).find('.more'));
+$('div').eq(2).find('.some').click((evt) => {
+  $(evt.target).toggleClass('btn--active');
+});
